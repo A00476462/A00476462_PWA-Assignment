@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Lilian_To do list</title>
+    <script src="db.js" defer></script> <!-- defer 表示在 HTML 解析完成后才加载脚本 -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+    <div class="header">
+        <img src="./todolist-96x96.png" width="75px" />
+        <h1>To do List</h1>
+    </div>
+
+    <!-- hr是水平分割线的意思 -->
+    <hr /> 
+
+    <form>
+        <label for="Title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Please input title for your to-do-list">
+
+        <label for="Priority">Priority</label>
+        <input type="text" id="priority" name="priority" placeholder="High, medium, low">
+
+        <label for="Description">Description</label>
+        <input type="text" id="description" name="description" placeholder="Please input description for your to-do-list">
+
+        <input type="submit" value="Add New To-do">
+    </form>
+
+    <hr />
+
+    <div id="todolist">        
+        
+    </div>
+</body>
+
+<script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+<script src="/db.js"></script>
+<script src="/script.js"></script>
+
+</html>
